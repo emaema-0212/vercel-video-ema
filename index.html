@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+    }
+
+    /* SP向け調整：中央寄せなど必要なら追加で */
+    @media screen and (max-width: 768px) {
+      video {
+        object-fit: contain;  /* cover → contain に変更！ */
+      }
+    }
+  </style>
+</head>
+<body>
+  <video autoplay loop muted playsinline>
+    <source src="kompo_1_1.mp4" type="video/mp4">
+  </video>
+</body>
+</html>
